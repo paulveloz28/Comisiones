@@ -1,35 +1,118 @@
+/* Reset básico para mejor control */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background-color: #0f172a;
     color: white;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
+    min-height: 100vh; /* Mejor que height */
+    margin: 0;
+    padding: 20px; /* Espacio en móviles */
 }
 
+/* CONTENEDOR */
 .contenedor {
     background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+
+    width: 100%;
+    max-width: 400px; /* Se adapta */
+    
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* TITULO */
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* LABELS */
+label {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* INPUTS */
 input {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    border-radius: 6px;
+    border: none;
+    outline: none;
+
+    font-size: 1rem;
 }
 
+/* BOTON */
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+
     background-color: #22c55e;
     border: none;
+    border-radius: 8px;
+
     color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #16a34a;
+}
+
+/* RESULTADOS */
+h2 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+p {
+    font-size: 0.95rem;
+    margin: 8px 0;
+}
+
+/* ===== RESPONSIVE PARA TABLETS ===== */
+@media (min-width: 600px) {
+    .contenedor {
+        max-width: 450px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ===== RESPONSIVE PARA CELULARES PEQUEÑOS ===== */
+@media (max-width: 400px) {
+    .contenedor {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        padding: 10px;
+    }
 }

@@ -1,0 +1,7 @@
+Prompt 1
+Actúa como un diseñador Gráfico experto.
+Necesito que hagas mi página responsive (que se vea perfecta para celulares y tablets).
+Reglas importantes:
+Solo HTML y CSS: No uses librerías externas (como Bootstrap o Tailwind).
+No toques los IDs: No cambies ni borres ningún id de los componentes, los necesito para mi código.
+Buen gusto: Como diseñador, asegúrate de que los espacios y tamaños de letra se vean bien en pantallas pequeñas.
