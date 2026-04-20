@@ -11,7 +11,34 @@ function calcularComision(numeroVentas, precioProducto) {
     return comision;
 }
 
-function calcular(){
+function validarInput(input, idError) {
+    let valor = input.value.trim();
+    let error = document.getElementById(idError);
+
+    // Vacío
+    if (valor === "") {
+        error.textContent = "Este campo es obligatorio";
+        return false;
+    }
+
+    // Solo números
+    if (!/^\d+$/.test(valor)) {
+        error.textContent = "Solo se permiten números";
+        return false;
+    }
+
+    // Máximo 5 dígitos
+    if (valor.length > 5) {
+        error.textContent = "Máximo 5 dígitos";
+        return false;
+    }
+
+    // Si todo está bien
+    error.textContent = "";
+    return true;
+}
+
+function calcular() {
 
     //Recuperamos propiedades de las cajas de texto
     //let componenteSueldoBase=document.getElementById("txtSueldoBase");
