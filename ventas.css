@@ -17,6 +17,7 @@ body {
     /* Mejor que height */
     margin: 0;
     padding: 20px;
+    align-items: flex-start
     /* Espacio en móviles */
 }
 
@@ -27,7 +28,7 @@ body {
     border-radius: 12px;
 
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     /* Se adapta */
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -94,39 +95,49 @@ p {
 }
 
 /* ===== RESPONSIVE PARA TABLETS ===== */
-@media (min-width: 600px) {
-    .contenedor {
-        max-width: 450px;
-        padding: 30px;
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
     }
 
-    h1 {
-        font-size: 1.8rem;
-    }
-}
-
-/* ===== RESPONSIVE PARA CELULARES PEQUEÑOS ===== */
-@media (max-width: 400px) {
     .contenedor {
         padding: 20px;
+        border-radius: 10px;
     }
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 1.1rem;
     }
 
     button {
-        padding: 10px;
+        padding: 14px;
+        font-size: 1.1rem;
     }
 
-    
+    p {
+        font-size: 1rem;
+    }
+
+    .error {
+        font-size: 0.9rem;
+    }
 }
 
 .error {
-        color: red;
-        font-style: italic;
-        font-size: 0.85rem;
-        display: block;
-        margin-top: -10px;
-        margin-bottom: 10px;
-    }
+    color: red;
+    font-style: italic;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
